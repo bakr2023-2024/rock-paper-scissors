@@ -12,4 +12,29 @@ const playRound = (humanChoice, computerChoice) => {
   if (scn1 || scn2 || scn3) return 1;
   return -1;
 };
-
+const playGame = () => {
+  for (let i = 0; i < 5; i++) {
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+    const result = playRound(humanChoice, computerChoice);
+    if (result == 1) {
+      console.log(`You win, ${humanChoice} beats ${computerChoice}`);
+      humanScore++;
+    } else if (result == -1) {
+      console.log(`You lose, ${computerChoice} beats ${humanChoice}`);
+      computerScore++;
+    } else {
+      console.log(`Draw, both chose ${humanChoice}`);
+    }
+  }
+  console.log(
+    `Game Result: ${
+      humanScore == computerScore
+        ? "Draw"
+        : humanScore > computerScore
+        ? "Player wins"
+        : "Computer wins"
+    }`
+  );
+};
+playGame();
