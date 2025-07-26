@@ -20,7 +20,7 @@ document
   .forEach((img) =>
     img.setAttribute(
       "src",
-      `https://i.pravatar.cc/500?img=${Math.random() * 70 + 1}`
+      `https://i.pravatar.cc/300?img=${Math.random() * 70 + 1}`
     )
   );
 document.querySelectorAll(".choiceBtn").forEach((btn) =>
