@@ -7,11 +7,43 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <div class="choicesContainer">
-      <button class="choiceBtn" data-choice="rock">🗿</button>
-      <button class="choiceBtn" data-choice="paper">🧻</button>
-      <button class="choiceBtn" data-choice="scissors">🔪</button>
+    <h1 class="title">Rock Paper Scissors</h1>
+    <div class="gameContainer">
+      <div class="playerContainer">
+        <p class="playerName">Human</p>
+        <img
+          src="https://i.pravatar.cc/500?img=66"
+          class="playerAvatar"
+          id="humanAvatar"
+        />
+        <p id="humanScore" class="playerScore">0</p>
+      </div>
+      <div class="mainContainer">
+        <div class="choicesContainer">
+          <button class="choiceBtn" data-choice="rock">🗿</button>
+          <button class="choiceBtn" data-choice="paper">🧻</button>
+          <button class="choiceBtn" data-choice="scissors">🔪</button>
+        </div>
+        <p class="resultContainer">
+          Choose a hand, Whoever gets to 5 first wins!
+        </p>
+      </div>
+      <div class="playerContainer">
+        <p class="playerName">Computer</p>
+        <img
+          src="https://i.pravatar.cc/500?img=50"
+          class="playerAvatar"
+          id="computerAvatar"
+        />
+        <p id="computerScore" class="playerScore">0</p>
+      </div>
     </div>
+    <footer>
+      &copy; 2025
+      <a href="https://github.com/bakr2023-2024" target="_blank"
+        >Bakr Mohamed Bakr</a
+      >
+    </footer>
   </body>
   <script src="./script.js"></script>
 </html>
