@@ -4,15 +4,22 @@ const getHumanChoice = () =>
   prompt("Enter rock, paper or scissors").toLowerCase();
 let humanScore = 0,
   computerScore = 0;
-document.addEventListener("DOMContentLoaded", () => {
-  document
-    .querySelectorAll(".choiceBtn")
-    .forEach((btn) =>
-      btn.addEventListener("click", (e) =>
-        console.log(playRound(e.target.dataset.choice, getComputerChoice()))
-      )
-    );
-});
+document
+  .querySelectorAll(".playerAvatar")
+  .forEach((img) =>
+    img.setAttribute(
+      "src",
+      `https://i.pravatar.cc/500?img=${Math.random() * 70 + 1}`
+    )
+  );
+document
+  .querySelectorAll(".choiceBtn")
+  .forEach((btn) =>
+    btn.addEventListener("click", (e) =>
+      console.log(playRound(e.target.dataset.choice, getComputerChoice()))
+    )
+  );
+
 const playRound = (humanChoice, computerChoice) => {
   if (humanChoice == computerChoice) return 0;
   const scn1 = humanChoice == "rock" && computerChoice == "scissors";
@@ -21,5 +28,3 @@ const playRound = (humanChoice, computerChoice) => {
   if (scn1 || scn2 || scn3) return 1;
   return -1;
 };
-const playGame = () => {};
-playGame();
