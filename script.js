@@ -2,4 +2,14 @@ const getComputerChoice = (choice = Math.floor(Math.random() * 3)) =>
   choice == 0 ? "rock" : choice == 1 ? "paper" : "scissors";
 const getHumanChoice = () =>
   prompt("Enter rock, paper or scissors").toLowerCase();
+let humanScore = 0,
+  computerScore = 0;
+const playRound = (humanChoice, computerChoice) => {
+  if (humanChoice == computerChoice) return 0;
+  const scn1 = humanChoice == "rock" && computerChoice == "scissors";
+  const scn2 = humanChoice == "scissors" && computerChoice == "paper";
+  const scn3 = humanChoice == "paper" && computerChoice == "rock";
+  if (scn1 || scn2 || scn3) return 1;
+  return -1;
+};
 
